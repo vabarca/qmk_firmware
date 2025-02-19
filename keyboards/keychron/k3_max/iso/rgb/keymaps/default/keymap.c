@@ -17,6 +17,11 @@
 #include QMK_KEYBOARD_H
 #include "keychron_common.h"
 
+enum combos {
+    PGDN_RIGHT_ENTER,
+    CTRL_DEL_SLASH,
+   };
+
 enum layers {
     MAC_BASE,
     MAC_FN,
@@ -24,11 +29,11 @@ enum layers {
     WIN_FN,
 };
 
-const uint16_t PROGMEM enter_combo[] = {KC_PGDN, KC_RIGHT, COMBO_END};
-const uint16_t PROGMEM slash_combo[] = {KC_LCTL, KC_DEL, COMBO_END};
+const uint16_t PROGMEM pgdnright_combo[] = {KC_PGDN, KC_RIGHT, COMBO_END};
+const uint16_t PROGMEM ctrldel_combo[] = {KC_LCTL, KC_DEL, COMBO_END};
 combo_t key_combos[] = {
-[0] = COMBO(enter_combo, KC_ENTER),
-[1] = COMBO(slash_combo, KC_SLASH),
+[PGDN_RIGHT_ENTER] = COMBO(pgdnright_combo, KC_ENTER),
+[CTRL_DEL_SLASH] = COMBO(ctrldel_combo, KC_SLASH),
 };
 
 // clang-format off
