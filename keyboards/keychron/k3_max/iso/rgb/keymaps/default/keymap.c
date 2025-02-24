@@ -36,6 +36,16 @@ combo_t key_combos[] = {
 [CTRL_DEL_SLASH] = COMBO(ctrldel_combo, KC_KP_SLASH),
 };
 
+
+const key_override_t kp_slash_key_override = ko_make_basic(MOD_MASK_CTRL, KC_DEL, KC_KP_SLASH);
+
+// This globally defines all key overrides to be used
+const key_override_t **key_overrides = (const key_override_t *[]){
+	&kp_slash_key_override,
+	NULL
+};
+
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [MAC_BASE] = LAYOUT_iso_85(
