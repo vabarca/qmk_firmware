@@ -33,7 +33,7 @@ const uint16_t PROGMEM pgdnright_combo[] = {KC_PGDN, KC_RIGHT, COMBO_END};
 const uint16_t PROGMEM ctrldel_combo[] = {KC_LCTL, KC_DEL, COMBO_END};
 combo_t key_combos[] = {
 [PGDN_RIGHT_ENTER] = COMBO(pgdnright_combo, KC_ENTER),
-[CTRL_DEL_SLASH] = COMBO(ctrldel_combo, KC_SLASH),
+[CTRL_DEL_SLASH] = COMBO(ctrldel_combo, KC_KP_SLASH),
 };
 
 // clang-format off
